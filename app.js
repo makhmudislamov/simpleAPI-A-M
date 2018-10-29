@@ -5,6 +5,7 @@
 var express = require('express');        // call express
 var app = express();                 // define our app using express
 var bodyParser = require('body-parser');
+// const venuesRouter = require('./routers/venues');
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
@@ -37,7 +38,8 @@ router.get('/', function (req, res) {
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
-app.use('/events', router);
+
+app.use('/events', router); // Forwards any requests to the /albums URI to our albums Router
 
 // START THE SERVER
 // =============================================================================
