@@ -21,6 +21,16 @@ var events = [
       "date": "November 19, 2020" }
 ]
 
+var venues = [
+    {
+        "name": "Civic Center Hall",
+        
+    },
+    {
+        "name": "Opera Hall",
+        
+    }
+]
 
 // ROUTES FOR OUR API
 // =============================================================================
@@ -30,6 +40,10 @@ var router = express.Router();              // get an instance of the express Ro
 router.get('/', function (req, res) {
     res.json({ events });
 });
+
+// router.get('/venues/events', function (req, res) {
+//     res.json({ events });
+// });
 
 
 
